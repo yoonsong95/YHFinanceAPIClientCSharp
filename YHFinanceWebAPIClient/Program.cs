@@ -12,13 +12,13 @@ namespace YHFinanceWebAPIClient
     class Program
     {
         private static readonly HttpClient client = new HttpClient();
+
         private static readonly string apiKey = "replace string with API key";
 
         // newiyo5137@wowcg.com - YH API
 
         private static async Task<QuoteResponse> ProcessQuotes(string symbols)
         {
-            client.DefaultRequestHeaders.Add("x-api-key", apiKey);
             var url = $"https://yfapi.net/v6/finance/quote?region=US&lang=en&symbols={symbols}";
             var streamTask = client.GetStreamAsync(url);
             var quoteResponse = await JsonSerializer.DeserializeAsync<QuoteResponse>(await streamTask);
@@ -27,7 +27,6 @@ namespace YHFinanceWebAPIClient
 
         private static async Task<FinanceInsight> ProcessFinanceInsight(string symbol)
         {
-            client.DefaultRequestHeaders.Add("x-api-key", apiKey);
             var url = $"https://yfapi.net/ws/insights/v1/finance/insights/?symbol={symbol}";
             var streamTask = await client.GetStringAsync(url);
             var financeInsightResponse = JObject.Parse(streamTask);
@@ -42,23 +41,24 @@ namespace YHFinanceWebAPIClient
 
         public static async Task Main(string[] args)
         {
-            // Quotes
-            //var quoteResponse = await ProcessQuotes("MSFT,NVDA,F");
-            //var quotes = quoteResponse.QuoteResult.Quotes;
-            //foreach (var quote in quotes)
-            //{
-            //    Console.WriteLine("Company Name: " + quote.CompanyName);
-            //    Console.WriteLine("Ticker: " + quote.Symbol);
-            //    Console.WriteLine("Currency: " + quote.Currency);
-            //    Console.WriteLine("Price: " + quote.Price);
-            //    Console.WriteLine("Fifty Day Average Price: " + quote.FiftyDayAveragePrice);
-            //    Console.WriteLine("Volume: " + quote.Volume);
-            //    Console.WriteLine();
-            //}
-            //Console.WriteLine();
+            client.DefaultRequestHeaders.Add("x-api-key", apiKey);
 
+            
+            //Quotes
+            var quoteResponse = await ProcessQuotes("MSFT,NVDA,F");
+            var quotes = quoteResponse.QuoteResult.Quotes;
+            foreach (var quote in quotes)
+            {
+                Console.WriteLine("Company Name: " + quote.CompanyName);
+                Console.WriteLine("Ticker: " + quote.Symbol);
+                Console.WriteLine("Currency: " + quote.Currency);
+                Console.WriteLine("Price: " + quote.Price);
+                Console.WriteLine("Fifty Day Average Price: " + quote.FiftyDayAveragePrice);
+                Console.WriteLine("Volume: " + quote.Volume);
+                Console.WriteLine();
+            }
+            Console.WriteLine();
 
-            // Note: Cannot make another API Call right away
 
             // Finance Insights
             var symbol = "F";
