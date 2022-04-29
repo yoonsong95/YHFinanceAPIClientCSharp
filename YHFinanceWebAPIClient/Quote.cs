@@ -19,7 +19,7 @@ namespace YHFinanceWebAPIClient
         public string Currency { get; set; }
 
         [JsonPropertyName("regularMarketPrice")]
-        public string Price { get; set; }
+        public double Price { get; set; }
 
         [JsonPropertyName("fiftyDayAverage")]
         public double FiftyDayAveragePrice { get; set; }
