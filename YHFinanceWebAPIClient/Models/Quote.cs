@@ -9,11 +9,11 @@ namespace YHFinanceWebAPIClient.Models
 {
     class Quote
     {
-        [JsonPropertyName("shortName")]
-        public string CompanyName { get; set; }
-
         [JsonPropertyName("symbol")]
         public string Symbol { get; set; }
+
+        [JsonPropertyName("shortName")]
+        public string CompanyName { get; set; }
 
         [JsonPropertyName("currency")]
         public string Currency { get; set; }
