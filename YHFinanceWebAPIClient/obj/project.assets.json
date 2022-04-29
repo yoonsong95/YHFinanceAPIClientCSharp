@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yoons\\Desktop\\Projects\\YHFinanceAPIClientC#\\YHFinanceWebAPIClient\\YHFinanceWebAPIClient.csproj",
+      "projectUniqueName": "C:\\Users\\yoons\\Desktop\\Projects\\YHFinanceAPIClientCSharp\\YHFinanceWebAPIClient\\YHFinanceWebAPIClient.csproj",
       "projectName": "YHFinanceWebAPIClient",
-      "projectPath": "C:\\Users\\yoons\\Desktop\\Projects\\YHFinanceAPIClientC#\\YHFinanceWebAPIClient\\YHFinanceWebAPIClient.csproj",
+      "projectPath": "C:\\Users\\yoons\\Desktop\\Projects\\YHFinanceAPIClientCSharp\\YHFinanceWebAPIClient\\YHFinanceWebAPIClient.csproj",
       "packagesPath": "C:\\Users\\yoons\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yoons\\Desktop\\Projects\\YHFinanceAPIClientC#\\YHFinanceWebAPIClient\\obj\\",
+      "outputPath": "C:\\Users\\yoons\\Desktop\\Projects\\YHFinanceAPIClientCSharp\\YHFinanceWebAPIClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yoons\\AppData\\Roaming\\NuGet\\NuGet.Config",

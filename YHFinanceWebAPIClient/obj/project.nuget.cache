@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1sAuLFUUPKM5264aNiEMKPuBxkkUHyBsq6UgJ7aJwFOcjhRAlJWf3il9AcGpAhdyW4w3yKdtlJpEDKFjMineSg==",
+  "dgSpecHash": "caItImdouALxbHGhfbN3au1XNuiHWSwvzif0AnsSpRNcUD7m3U3kIlqYpofl0jAq5kPD96hfdfSQjuJ0MmiZJw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yoons\\Desktop\\Projects\\YHFinanceAPIClientC#\\YHFinanceWebAPIClient\\YHFinanceWebAPIClient.csproj",
+  "projectFilePath": "C:\\Users\\yoons\\Desktop\\Projects\\YHFinanceAPIClientCSharp\\YHFinanceWebAPIClient\\YHFinanceWebAPIClient.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
