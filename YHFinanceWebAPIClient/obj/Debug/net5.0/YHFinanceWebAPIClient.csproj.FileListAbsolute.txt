@@ -14,3 +14,5 @@ C:\Users\yoons\Desktop\Projects\YHFinanceAPIClientCSharp\YHFinanceWebAPIClient\o
 C:\Users\yoons\Desktop\Projects\YHFinanceAPIClientCSharp\YHFinanceWebAPIClient\obj\Debug\net5.0\ref\YHFinanceWebAPIClient.dll
 C:\Users\yoons\Desktop\Projects\YHFinanceAPIClientCSharp\YHFinanceWebAPIClient\obj\Debug\net5.0\YHFinanceWebAPIClient.pdb
 C:\Users\yoons\Desktop\Projects\YHFinanceAPIClientCSharp\YHFinanceWebAPIClient\obj\Debug\net5.0\YHFinanceWebAPIClient.genruntimeconfig.cache
+C:\Users\yoons\Desktop\Projects\YHFinanceAPIClientCSharp\YHFinanceWebAPIClient\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\yoons\Desktop\Projects\YHFinanceAPIClientCSharp\YHFinanceWebAPIClient\obj\Debug\net5.0\YHFinanceWebAPIClient.csproj.CopyComplete

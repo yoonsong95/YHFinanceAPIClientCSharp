@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "caItImdouALxbHGhfbN3au1XNuiHWSwvzif0AnsSpRNcUD7m3U3kIlqYpofl0jAq5kPD96hfdfSQjuJ0MmiZJw==",
+  "dgSpecHash": "YAb4L7mgCK2gzkwHgJJBdnE3wdqqFbaQ2rgD8J2LO+4JUWybT8Wj+tC00EWss3wfHIqdo+O1FaVhCHuRu7oDnw==",
   "success": true,
   "projectFilePath": "C:\\Users\\yoons\\Desktop\\Projects\\YHFinanceAPIClientCSharp\\YHFinanceWebAPIClient\\YHFinanceWebAPIClient.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\yoons\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

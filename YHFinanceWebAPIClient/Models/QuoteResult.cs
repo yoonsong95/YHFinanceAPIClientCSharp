@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json.Serialization;
 
-namespace YHFinanceWebAPIClient
+namespace YHFinanceWebAPIClient.Models
 {
-    class QuoteResponse
+    class QuoteResult
     {
-        [JsonPropertyName("quoteResponse")]
-        public QuoteResult QuoteResult { get; set; }
+        [JsonPropertyName("result")]
+        public List<Quote> Quotes { get; set; }
     }
 }

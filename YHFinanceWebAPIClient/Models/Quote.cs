@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json.Serialization;
 
-namespace YHFinanceWebAPIClient
+namespace YHFinanceWebAPIClient.Models
 {
     class Quote
     {
