@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace YHFinanceWebAPIClient.Models
 {
     class Company
     {
-        [JsonPropertyName("dividends")]
+        [JsonProperty("dividends")]
         public double Dividends { get; set; }
     
-        [JsonPropertyName("hiring")]
+        [JsonProperty("hiring")]
         public double Hiring { get; set; }
 
-        [JsonPropertyName("innovativeness")]
+        [JsonProperty("innovativeness")]
         public double Innovativeness { get; set; }
     }
 }

@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace YHFinanceWebAPIClient.Models
 {
     class MarketSummary
     {
-        [JsonPropertyName("exchange")]
+        [JsonProperty("exchange")]
         public string Exchange { get; set; }
 
-        [JsonPropertyName("shortName")]
+        [JsonProperty("shortName")]
         public string Name { get; set; }
 
-        [JsonPropertyName("quoteType")]
+        [JsonProperty("quoteType")]
         public string QuoteType { get; set; }
 
-        [JsonPropertyName("region")]
+        [JsonProperty("region")]
         public string Region { get; set; }
 
     }

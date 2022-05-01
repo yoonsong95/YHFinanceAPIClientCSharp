@@ -3,28 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace YHFinanceWebAPIClient.Models
 {
     class Quote
     {
-        [JsonPropertyName("symbol")]
+        [JsonProperty("symbol")]
         public string Symbol { get; set; }
 
-        [JsonPropertyName("shortName")]
+        [JsonProperty("shortName")]
         public string CompanyName { get; set; }
 
-        [JsonPropertyName("currency")]
+        [JsonProperty("currency")]
         public string Currency { get; set; }
 
-        [JsonPropertyName("regularMarketPrice")]
+        [JsonProperty("regularMarketPrice")]
         public double Price { get; set; }
 
-        [JsonPropertyName("fiftyDayAverage")]
+        [JsonProperty("fiftyDayAverage")]
         public double FiftyDayAveragePrice { get; set; }
 
-        [JsonPropertyName("regularMarketVolume")]
+        [JsonProperty("regularMarketVolume")]
         public int Volume { get; set; }
     }
 }

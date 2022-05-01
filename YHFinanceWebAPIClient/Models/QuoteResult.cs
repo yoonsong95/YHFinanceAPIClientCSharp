@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.Json.Serialization;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+//using Newtonsoft.Json;
 
-namespace YHFinanceWebAPIClient.Models
-{
-    class QuoteResult
-    {
-        [JsonPropertyName("result")]
-        public List<Quote> Quotes { get; set; }
-    }
-}
+//namespace YHFinanceWebAPIClient.Models
+//{
+//    class QuoteResult
+//    {
+//        [JsonProperty("result")]
+//        public List<Quote> Quotes { get; set; }
+//    }
+//}

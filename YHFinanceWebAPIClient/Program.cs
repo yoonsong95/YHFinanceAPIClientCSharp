@@ -17,12 +17,26 @@ namespace YHFinanceWebAPIClient
 
         // newiyo5137@wowcg.com - YH API
 
-        private static async Task<QuoteResponse> ProcessQuotes(string symbols)
+        //private static async Task<QuoteResponse> ProcessQuotes(string symbols)
+        //{
+        //    var url = $"{baseUrl}/v6/finance/quote?region=US&lang=en&symbols={symbols}";
+        //    var streamTask = await client.GetStreamAsync(url);
+        //    var quoteResponse = await JsonSerializer.DeserializeAsync<QuoteResponse>(streamTask);
+        //    return quoteResponse;
+        //}
+
+        private static async Task<List<Quote>> ProcessQuotes(string symbols)
         {
             var url = $"{baseUrl}/v6/finance/quote?region=US&lang=en&symbols={symbols}";
-            var streamTask = await client.GetStreamAsync(url);
-            var quoteResponse = await JsonSerializer.DeserializeAsync<QuoteResponse>(streamTask);
-            return quoteResponse;
+            var stringTask = await client.GetStringAsync(url);
+            var quoteResponse = JObject.Parse(stringTask);
+            var quoteResult = quoteResponse["quoteResponse"]["result"].Children().AsEnumerable();
+            var quoteList = new List<Quote>();
+            foreach (var quote in quoteResult)
+            {
+                quoteList.Add(quote.ToObject<Quote>());
+            }
+            return quoteList;
         }
 
         private static async Task<FinanceInsight> ProcessFinanceInsight(string symbol)
@@ -61,7 +75,7 @@ namespace YHFinanceWebAPIClient
             //Quotes
             var symbols = "MSFT,NVDA,AMD,UBER,F";
             var quoteResponse = await ProcessQuotes(symbols);
-            var quotes = quoteResponse.QuoteResult.Quotes;
+            var quotes = quoteResponse;
             foreach (var quote in quotes)
             {
                 Console.WriteLine("Company Name: " + quote.CompanyName);
