@@ -20,8 +20,8 @@ namespace YHFinanceWebAPIClient
         private static async Task<QuoteResponse> ProcessQuotes(string symbols)
         {
             var url = $"{baseUrl}/v6/finance/quote?region=US&lang=en&symbols={symbols}";
-            var stringTask = client.GetStreamAsync(url);
-            var quoteResponse = await JsonSerializer.DeserializeAsync<QuoteResponse>(await stringTask);
+            var streamTask = await client.GetStreamAsync(url);
+            var quoteResponse = await JsonSerializer.DeserializeAsync<QuoteResponse>(streamTask);
             return quoteResponse;
         }
 
